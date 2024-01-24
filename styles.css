@@ -1,0 +1,47 @@
+/* Logo */
+@font-face { 
+  font-family: "commuter sans";
+  src: url("./fonts/Commuter-Sans-Bold.otf") format("opentype");
+}
+
+/* Text */
+@font-face { 
+  font-family: "monograf";
+  src: url("./fonts/Monograf-Text-Regular.ttf") format("truetype");
+}
+
+/* Theme */
+@font-face {
+  font-family: "Approach Mono";
+  src: url("./fonts/Approach-Mono-Bold.otf") format("opentype")
+}
+
+/* Button */
+@font-face { 
+  font-family: "rational";
+  src: url("./fonts/Ratonal-Semi-Bold.otf") format("opentype");
+}
+
+/* Numbers */
+@font-face { 
+  font-family: "TT Travels";
+  src: url("./fonts/TT-Travels-Bold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'monograf', monospace;
+}
+
+h1 {
+  font-family: 'commuter sans', sans-serif;
+}
+
+button {
+  font-family: 'rational', monospace;
+}
+
+.numbers {
+  font-family: 'TT Travels';
+}
