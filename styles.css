@@ -1,47 +1,238 @@
+/** IMPORTS **/
+
 /* Logo */
-@font-face { 
+@font-face {
   font-family: "commuter sans";
   src: url("./fonts/Commuter-Sans-Bold.otf") format("opentype");
 }
-
 /* Text */
-@font-face { 
+@font-face {
   font-family: "monograf";
   src: url("./fonts/Monograf-Text-Regular.ttf") format("truetype");
 }
 
 /* Theme */
 @font-face {
-  font-family: "Approach Mono";
-  src: url("./fonts/Approach-Mono-Bold.otf") format("opentype")
+  font-family: "Monograf Bold";
+  src: url("./fonts/Monograf-Text-Bold.ttf") format("opentype");
 }
-
 /* Button */
-@font-face { 
+@font-face {
   font-family: "rational";
   src: url("./fonts/Ratonal-Semi-Bold.otf") format("opentype");
 }
-
 /* Numbers */
-@font-face { 
+@font-face {
   font-family: "TT Travels";
   src: url("./fonts/TT-Travels-Bold.otf") format("opentype");
+}
+
+/** VARIABLES **/
+:root {
+  --backgroundPrimary: #141c2f;
+  --card: #1f2a48;
+  --fontPrimary: #f6fafd;
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'monograf', monospace;
+  font-family: "monograf", monospace;
 }
 
-h1 {
-  font-family: 'commuter sans', sans-serif;
+body {
+  padding: 0 2rem;
+  background: var(--backgroundPrimary);
+  color: var(--fontPrimary);
 }
 
-button {
-  font-family: 'rational', monospace;
+header {
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--fontPrimary);
+}
+
+.logo {
+  font-size: 2.25rem;
+  /* font-family: 'commuter sans', sans-serif; */
+}
+
+.theme-button {
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 3.5vw;
+  background-color: transparent;
+  font-family: "Monograf Bold", monospace;
+  letter-spacing: 0.3rem;
+  font-size: 1rem;
+  color: var(--fontPrimary);
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+form {
+  margin-top: 5vh;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--card);
+}
+
+.search-input {
+  width: 70%;
+  padding: 1.7rem;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--fontPrimary);
+  font-weight: bold;
+  letter-spacing: 1.4px;
+}
+
+.search-input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  width: 26%;
+  height: 79.6%;
+  border: none;
+  border-image: none;
+  border-radius: 10px;
+  position: absolute;
+  left: calc(74% - 10px);
+  background: #0079fe;
+  font-family: "rational", monospace;
+  color: var(--fontPrimary);
+  font-size: 1.1rem;
+}
+
+.github-info-wrapper {
+  margin-top: 2vh;
+  padding: 7%;
+  border-radius: 20px;
+  background: var(--card);
+}
+
+.profile-info {
+  margin-top: 1.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6.2vw;
+}
+
+.profile-img {
+  width: 25%;
+  height: auto;
+  /* max-width: 15vw; */
+  /* max-height: 15vw; */
+}
+
+.developer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7vh;
+  color: var(--fontPrimary);
+}
+
+.developer-name {
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+.github-link,
+.github-link:hover,
+.github-link:visited {
+  color: #0764cd;
+  font-family: "Monograf Bold";
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+.github-link:active {
+  filter: brightness(1.3);
+}
+
+.joined-date {
+  font-size: 1rem;
+  letter-spacing: 2.2px;
+  transform: translateY(0.8vh);
+}
+
+.developer-desciption {
+  margin-top: 5.1vh;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  letter-spacing: 2.1px;
+  color: var(--fontPrimary);
+}
+
+.stats-wrapper {
+  margin-top: 3.6vh;
+  padding: 7%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: var(--backgroundPrimary);
+}
+
+.repos,
+.followers,
+.following {
+  color: #90939c;
+  font-size: 1rem;
+  font-family: "Monograf Bold", monospace;
+  font-weight: bold;
 }
 
 .numbers {
-  font-family: 'TT Travels';
+  margin-top: 2vh;
+  text-align: center;
+  font-family: "TT Travels";
+  font-size: 1.2rem;
+  color: var(--fontPrimary);
+}
+
+.social-info-wrapper {
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4vh;
+}
+
+.social-info {
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+}
+
+.social-icons {
+  width: 35px;
+  font-size: 1.55rem;
+  color: var(--fontPrimary);
+}
+
+.location,
+.blog,
+.twitter,
+.company {
+  font-size: 1rem;
+  color: var(--fontPrimary);
+  letter-spacing: 2.2px;
 }

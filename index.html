@@ -1,67 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <title>devFinder</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles.css" />
-    </head>
-    <body>
-        <header>
-            <h1>devfinder</h1>
-            <div class="theme-wrapper">
-                <p id="themeName">
-                    <span id="themeIcon"></span>
-                </p>
-            </div>
-        </header>
-        <main>
-            <form class="search">
-                <input type="text" placeholder="Seach GitHub username"/>
-                <span class="serch-icon"></span>
-                <button class="search-button">Search</button>
-            </form>
-            <section class="">
-                <div class="profile-info">
-                    <img src="" alt="">
-                    <h2 class="developer-name">Developer Name</h2>
-                    <a class="github-link">@dev</a>
-                    <p class="github-joined-date">Joined 25 Jan 2011</p>
-                </div>
-                <p class="developer-desciption">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat aliquam quisquam exercitationem.</p>
-                <div class="stats-wrapper">
-                    <div>
-                        <p class="repos">Repos</p>
-                        <p class="numbers">8</p>
-                    </div>
-                    <div>
-                        <p class="followers">Followers</p>
-                        <p class="numbers">3938</p>
-                    </div>
-                    <div>
-                        <p class="following">Following</p>
-                        <p class="numbers">9</p>
-                    </div>
-                </div>
-                <div class="social-info">
-                    <div>
-                        <i src=""></i>
-                        <p class="location">San Francisco</p>
-                    </div>
-                    <div>
-                        <i src=""></i>
-                        <a class="blog" href="#" target="_blank">https://github.blog</a>
-                    </div>
-                    <div>
-                        <i src=""></i>
-                        <a class="twitter" href="#" target="_blank">Not Avaiable</a>
-                    </div>
-                    <div class="company">
-                        <i src=""></i>
-                        <a class="company" href="#" target="_blank">@github</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>devfinder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Google Icons-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">devfinder</h1>
+      <button id="theme-button" class="theme-button">
+        <span id="theme">LIGHT</span>
+        <span class="material-symbols-outlined theme-icon"> light_mode </span>
+      </button>
+    </header>
+    <main>
+      <form class="search-wrapper">
+        <input class="search-input" type="text" placeholder="Seach GitHub username" />
+        <span class="serch-icon"></span>
+        <button class="search-button">Search</button>
+      </form>
+      <section class="github-info-wrapper">
+        <div class="profile-info">
+          <img class="profile-img" src="./imgs/dark-profile-circle.svg" alt="profile image" />
+          <div class="developer-info">
+            <h2 class="developer-name">The Octocat</h2>
+            <a class="github-link" href="#" target="_blank">@octocat</a>
+            <p class="joined-date">Joined 25 Jan 2011</p>
+          </div>
+        </div>
+        <p class="developer-desciption">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat aliquam quisquam.</p>
+        <div class="stats-wrapper">
+          <div>
+            <p class="repos">Repos</p>
+            <p class="numbers">8</p>
+          </div>
+          <div>
+            <p class="followers">Followers</p>
+            <p class="numbers">3938</p>
+          </div>
+          <div>
+            <p class="following">Following</p>
+            <p class="numbers">9</p>
+          </div>
+        </div>
+        <div class="social-info-wrapper">
+          <div class="social-info">
+            <i class="fa-solid fa-location-dot social-icons"></i>
+            <p class="location">San Francisco</p>
+          </div>
+          <div class="social-info">
+            <i class="fa-solid fa-link social-icons"></i>
+            <a class="blog" href="#" target="_blank">https://github.blog</a>
+          </div>
+          <div class="social-info">
+            <i class="fa-brands fa-twitter social-icons"></i>
+            <a class="twitter" href="#" target="_blank">Not Avaiable</a>
+          </div>
+          <div class="social-info">
+            <i class="fa-solid fa-building social-icons"></i>
+            <a class="company" href="#" target="_blank">@github</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./change-theme.js"></script>
+    <script src="https://kit.fontawesome.com/fa6f70d00c.js" crossorigin="anonymous"></script>
+  </body>
 </html>
