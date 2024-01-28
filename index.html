@@ -14,9 +14,9 @@
   <body>
     <header>
       <h1 class="logo">devfinder</h1>
-      <button id="theme-button" class="theme-button">
+      <button id="themeButton" class="theme-button">
         <span id="theme">LIGHT</span>
-        <span class="material-symbols-outlined theme-icon"> light_mode </span>
+        <span id="themeIcon" class="material-symbols-outlined theme-icon">light_mode</span>
       </button>
     </header>
     <main>
@@ -31,45 +31,52 @@
           <div class="developer-info">
             <h2 class="developer-name">The Octocat</h2>
             <a class="github-link" href="#" target="_blank">@octocat</a>
-            <p class="joined-date">Joined 25 Jan 2011</p>
+            <p class="joinned-date">Joined 25 Jan 2011</p>
           </div>
         </div>
         <p class="developer-desciption">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat aliquam quisquam.</p>
         <div class="stats-wrapper">
           <div>
             <p class="repos">Repos</p>
-            <p class="numbers">8</p>
+            <p id="reposCount" class="numbers">8</p>
           </div>
           <div>
             <p class="followers">Followers</p>
-            <p class="numbers">3938</p>
+            <p id="followersCount" class="numbers">3938</p>
           </div>
           <div>
             <p class="following">Following</p>
-            <p class="numbers">9</p>
+            <p id="followingCount" class="numbers">9</p>
           </div>
         </div>
         <div class="social-info-wrapper">
-          <div class="social-info">
+          <div class="social-info location-wrapper">
             <i class="fa-solid fa-location-dot social-icons"></i>
             <p class="location">San Francisco</p>
           </div>
-          <div class="social-info">
+          <div class="social-info blog-wrapper">
             <i class="fa-solid fa-link social-icons"></i>
             <a class="blog" href="#" target="_blank">https://github.blog</a>
           </div>
-          <div class="social-info">
+          <div class="social-info twitter-wrapper">
             <i class="fa-brands fa-twitter social-icons"></i>
             <a class="twitter" href="#" target="_blank">Not Avaiable</a>
           </div>
-          <div class="social-info">
+          <div class="social-info company-wrapper">
             <i class="fa-solid fa-building social-icons"></i>
             <a class="company" href="#" target="_blank">@github</a>
           </div>
         </div>
       </section>
+      <section class="repositories">
+        <h3 class="repositories-title">REPOSITORIES</h3>
+        <ul class="repositories-wrapper">
+          <li>item1</li>
+        </ul>
+      </section>
     </main>
-    <script src="./change-theme.js"></script>
     <script src="https://kit.fontawesome.com/fa6f70d00c.js" crossorigin="anonymous"></script>
+    <script src="./change-theme.js"></script>
+    <script src="./findUser.js"></script>
   </body>
 </html>
