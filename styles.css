@@ -45,10 +45,13 @@
   font-family: "monograf", monospace;
 }
 
+
 body {
+  max-width: 1080px;
+  margin: 0 auto;
   padding: 0 2rem;
-  background: var(--backgroundPrimary);
   color: var(--fontPrimary);
+  background: var(--backgroundPrimary);
 }
 
 header {
@@ -240,6 +243,7 @@ form {
   font-size: 1rem;
   color: var(--fontPrimary);
   letter-spacing: 2.2px;
+  text-decoration: none;
 }
 
 .repositories {
@@ -278,4 +282,30 @@ form {
 
 .repo-description {
   margin-top: 2vh;
+}
+
+@media only screen and (min-width: 700px) {
+  .social-info-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .social-info {
+    min-width: 45%;
+  }
+}
+
+
+@media only screen and (min-width: 890px) {
+  .github-info-wrapper {
+  }
+  .profile-img {
+    width: 28%;
+    position: absolute;
+    left: -37%;
+  }
+  .profile-info, .stats-wrapper, .social-info-wrapper {
+    position: relative;
+    width: 70%;
+    left: 30%;
+  }
 }

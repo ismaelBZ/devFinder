@@ -12,10 +12,10 @@ const getData = async (user) => {
     public_repos: reposNumber,
     followers: followersNumber,
     following: followingNumber,
-    location,
-    blog,
-    twitter_username: twitter,
-    company,
+    location: userLocation,
+    blog: userBlog,
+    twitter_username: userTwitter,
+    company: userCompany,
     repos_url,
   } = profile;
 
@@ -41,34 +41,34 @@ const getData = async (user) => {
     document.getElementById("followingCount").innerHTML = followingNumber;
 
     /* Social Info */
-    document.querySelector(".location").innerHTML = location;
-    if (location) {
-      document.querySelector(".location-wrapper").style.display = "flex";
-    } else {
-      document.querySelector(".location-wrapper").style.display = "none";
-    }
 
-    document.querySelector(".blog").innerHTML = blog;
-    if (blog) {
-      document.querySelector(".blog-wrapper").style.display = "flex";
-      console.log(blog);
-    } else {
-      document.querySelector(".blog-wrapper").style.display = "none";
-    }
+    const notAvaible = "Not Avaible";
+    const unavaibleColor = '#555' 
+       
 
-    document.querySelector(".twitter").innerHTML = twitter;
-    if (twitter) {
-      document.querySelector(".twitter-wrapper").style.display = "flex";
-    } else {
-      document.querySelector(".twitter-wrapper").style.display = "none";
-    }
+    document.querySelector(".location").innerHTML = userLocation;
+    if (!userLocation) {
+      document.querySelector(".location").textContent = notAvaible;
+      document.querySelector(".location").style.color = unavaibleColor;
+    };
 
-    document.querySelector(".company").innerHTML = company;
-    if (company) {
-      document.querySelector(".company-wrapper").style.display = "flex";
-    } else {
-      document.querySelector(".company-wrapper").style.display = "none";
-    }
+    document.querySelector(".blog").innerHTML = userBlog;
+    if (!userBlog) {
+      document.querySelector(".blog").textContent = notAvaible;
+      document.querySelector(".blog").style.color = unavaibleColor;
+    };
+
+    document.querySelector(".twitter").innerHTML = userTwitter;
+    if (!userTwitter) {
+      document.querySelector(".twitter").textContent = notAvaible;
+      document.querySelector(".twitter").style.color = unavaibleColor;
+    };
+
+    document.querySelector(".company").innerHTML = userCompany;
+    if (!userCompany) {
+      document.querySelector(".company").textContent = notAvaible;
+      document.querySelector(".company").style.color = unavaibleColor;
+    };
 
     /** REPOS **/
     const reposData = await fetch(repos_url+"?sort=updated");
