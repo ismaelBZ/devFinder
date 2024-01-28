@@ -20,7 +20,6 @@ const getData = async (user) => {
   } = profile;
 
   if (githubUserName) {
-
     /* Profile Info */
     document.querySelector(".profile-img").setAttribute("src", profileImg);
     document.querySelector(".developer-name").innerHTML = developerName;
@@ -43,64 +42,68 @@ const getData = async (user) => {
     /* Social Info */
 
     const notAvaible = "Not Avaible";
-    const unavaibleColor = '#555' 
-       
+    const unavaibleColor = "#555";
 
     document.querySelector(".location").innerHTML = userLocation;
     if (!userLocation) {
       document.querySelector(".location").textContent = notAvaible;
       document.querySelector(".location").style.color = unavaibleColor;
-    };
+    }
 
     document.querySelector(".blog").innerHTML = userBlog;
     if (!userBlog) {
       document.querySelector(".blog").textContent = notAvaible;
       document.querySelector(".blog").style.color = unavaibleColor;
-    };
+    }
 
     document.querySelector(".twitter").innerHTML = userTwitter;
     if (!userTwitter) {
       document.querySelector(".twitter").textContent = notAvaible;
       document.querySelector(".twitter").style.color = unavaibleColor;
-    };
+    }
 
     document.querySelector(".company").innerHTML = userCompany;
     if (!userCompany) {
       document.querySelector(".company").textContent = notAvaible;
       document.querySelector(".company").style.color = unavaibleColor;
-    };
+    }
 
     /** REPOS **/
-    const reposData = await fetch(repos_url+"?sort=updated");
+    const reposData = await fetch(repos_url + "?sort=updated");
     const repos = await reposData.json();
-    let repositoriesWrapper = document.querySelector('.repositories-wrapper');
+    let repositoriesWrapper = document.querySelector(".repositories-wrapper");
 
-    repositoriesWrapper.innerHTML= 
-      (repos.map(({
-        name,
-        html_url: repoUrl,
-        description,
-        }) => {
-          return description ? (
-            `
+    repositoriesWrapper.innerHTML = repos
+      .map(({ name, html_url: repoUrl, description }) => {
+        return description
+          ? `
               <li>
                 <a class="repo-name" href=${repoUrl}>${name}</a>
                 <p class="repo-description">${description}</p>
               </li>
             `
-          ) : (
-            `
+          : `
               <li>
                 <a class="repo-name" href=${repoUrl}>${name}</a>
               </li>
-            `
-          );
-        }
-      )).splice(",").join("");
+            `;
+      })
+      .splice(",")
+      .join("");
 
-    repositoriesWrapper.innerHTML = repositoriesList
-
+    repositoriesWrapper.innerHTML = repositoriesList;
   }
 };
 
-getData("ismaelBZ");
+
+
+const devFinder = (e)=> {
+  e.preventDefault();
+  
+  const user = document.getElementById('searchInput').value;
+  console.log(user);
+  getData(user);
+}
+  
+const searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click", devFinder);
