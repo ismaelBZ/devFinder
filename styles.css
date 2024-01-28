@@ -306,7 +306,7 @@ form {
     position: absolute;
     left: -37%;
   }
-  .profile-info, .stats-wrapper, .social-info-wrapper {
+  .profile-info, .developer-desciption, .stats-wrapper, .social-info-wrapper {
     position: relative;
     width: 70%;
     left: 30%;
