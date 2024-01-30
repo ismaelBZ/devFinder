@@ -43,29 +43,38 @@ const getData = async (user) => {
 
     const notAvaible = "Not Avaible";
     const unavaibleColor = "#555";
+    const avaibleColor = "#f6fafd0";
 
     document.querySelector(".location").innerHTML = userLocation;
     if (!userLocation) {
       document.querySelector(".location").textContent = notAvaible;
       document.querySelector(".location").style.color = unavaibleColor;
+    } else {
+      document.querySelector(".location").style.color = avaibleColor;
     }
 
     document.querySelector(".blog").innerHTML = userBlog;
     if (!userBlog) {
       document.querySelector(".blog").textContent = notAvaible;
       document.querySelector(".blog").style.color = unavaibleColor;
+    } else {
+      document.querySelector(".blog").style.color = avaibleColor;
     }
 
     document.querySelector(".twitter").innerHTML = userTwitter;
     if (!userTwitter) {
       document.querySelector(".twitter").textContent = notAvaible;
       document.querySelector(".twitter").style.color = unavaibleColor;
+    } else {
+      document.querySelector(".twitter").style.color = avaibleColor;
     }
 
     document.querySelector(".company").innerHTML = userCompany;
     if (!userCompany) {
       document.querySelector(".company").textContent = notAvaible;
       document.querySelector(".company").style.color = unavaibleColor;
+    } else {
+      document.querySelector(".company").style.color = avaibleColor;
     }
 
     /** REPOS **/
