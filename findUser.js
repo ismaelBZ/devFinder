@@ -42,8 +42,8 @@ const getData = async (user) => {
     /* Social Info */
 
     const notAvaible = "Not Avaible";
-    const unavaibleColor = "#555";
-    const avaibleColor = "#f6fafd";
+    const unavaibleColor = "#777";
+    const avaibleColor = "--font-primary";
 
     document.querySelector(".location").innerHTML = userLocation;
     if (!userLocation) {
