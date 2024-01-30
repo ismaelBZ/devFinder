@@ -43,7 +43,7 @@ const getData = async (user) => {
 
     const notAvaible = "Not Avaible";
     const unavaibleColor = "#555";
-    const avaibleColor = "#f6fafd0";
+    const avaibleColor = "#f6fafd";
 
     document.querySelector(".location").innerHTML = userLocation;
     if (!userLocation) {

@@ -248,7 +248,6 @@ form {
   font-size: 1rem;
   color: var(--fontPrimary);
   letter-spacing: 2.2px;
-  text-decoration: none;
 }
 
 .repositories {
