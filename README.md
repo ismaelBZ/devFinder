@@ -43,7 +43,7 @@ I've learned many things doing this project. The main one is creating a theme-sw
 
 ## Author
 
-- LinkedIN - [/ismaelbetzoletti](https://www.linkedin.com/in/ismaelbetzoletti/)
+- LinkedIn - [/ismaelbetzoletti](https://www.linkedin.com/in/ismaelbetzoletti/)
 - Portfolio - [Ismael Bet Zoletti](https://ismaelbz.github.io/portfolio/)
 
 ## Acknowledgments
